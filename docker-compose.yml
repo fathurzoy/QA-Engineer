@@ -1,0 +1,9 @@
+services:
+  qa-engineer:
+    build: .
+    container_name: qa-engineer
+    ports:
+      - "3002:3000"
+    environment:
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
+    restart: unless-stopped
